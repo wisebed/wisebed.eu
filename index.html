@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WISEBED - Wireless Sensor Network Testbeds</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="wisebed_nav">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home"><img src="img/wisebed-logo-dots-30x30.png" width="30" height="30"/></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Testbeds<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#testbeds_uzl">University of Lübeck (UZL)</a></li>
+                            <li><a href="#testbeds_fub">Freie Universität Berlin (FUB)</a></li>
+                            <li><a href="#testbeds_tubs">Braunschweig Institute of Technology (TUBS)</a></li>
+                            <li><a href="#testbeds_cti">Research Academic Computer Technology Institute (CTI)</a></li>
+                            <li><a href="#testbeds_upc">Universitat Politecnica de Catalunya (UPC)</a></li>
+                            <li><a href="#testbeds_ubern">Universität Bern (UBERN)</a></li>
+                            <li><a href="#testbeds_unige">University of Geneva (UNIGE)</a></li>
+                            <li><a href="#testbeds_tud">Delft University of Technology (TUD)</a></li>
+                            <li><a href="#testbeds_ulanc">Lancaster University (ULANC)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools &amp; Docs<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#tools_web">Web Clients</a></li>
+                            <li><a href="#tools_desktop">Desktop Clients</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#tutorials">Tutorials</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#docs_soap">SOAP API</a></li>
+                            <li><a href="#docs_rest">REST API</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#tools_tr">Testbed Backend Software</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Application Development<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#appdev_wiselib">Wiselib</a></li>
+                            <li><a href="#appdev_lorien">Lorien OS</a></li>
+                            <li><a href="#appdev_shawn">Shawn</a></li>
+                            <li><a href="#appdev_vm">Virtual Machine</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About WISEBED<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#about_desc">Description &amp; Goals</a></li>
+                            <li><a href="#about_publications">Publications</a></li>
+                            <li><a href="#about_partners">Partners</a></li>
+                            <li><a href="#about_deliverables">Deliverables</a></li>
+                            <li><a href="#about_techreports">Technical Reports</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+</div>
+<div id="wisebed_content"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.loadTemplate-1.4.4.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+    function navigate(destination) {
+
+        console.log("Navigating to " + destination);
+
+        $("#wisebed_nav").find('li.dropdown').toggleClass('active', false);
+        $("#wisebed_nav")
+                .find("ul.dropdown-menu li a[href=#" + destination + "]")
+                .closest('li.dropdown')
+                .toggleClass('active', true);
+
+        var template;
+        if (destination == '') {
+            template = 'home';
+        } else if (templates.indexOf(destination) > -1) {
+            template = destination;
+        } else {
+            template = "unknown";
+        }
+
+        $("#wisebed_content").empty();
+        $("#wisebed_content").loadTemplate(template + ".tmpl.html", {});
+    }
+
+    $("#wisebed_nav").find("ul.dropdown-menu li a").click(function() {
+        navigate($(this).attr('href').substr(1));
+    });
+
+    var templates = [
+        "home",
+        "testbeds_uzl",
+        "testbeds_fub",
+        "testbeds_tubs",
+        "testbeds_cti",
+        "testbeds_upc",
+        "testbeds_ubern",
+        "testbeds_unige",
+        "testbeds_tud",
+        "testbeds_ulanc",
+        "tools_web",
+        "tools_desktop",
+        "tutorials",
+        "docs_soap",
+        "docs_rest",
+        "tools_tr",
+        "appdev_wiselib",
+        "appdev_lorien",
+        "appdev_shawn",
+        "appdev_vm",
+        "about_desc",
+        "about_publications",
+        "about_partners",
+        "about_deliverables",
+        "about_techreports",
+        "unknown"
+    ];
+
+    $(function() {
+        navigate(window.location.hash.substr(1));
+    });
+
+    $(window).on('hashchange', function() {
+        navigate(window.location.hash.substr(1));
+    });
+</script>
+</body>
+</html>
