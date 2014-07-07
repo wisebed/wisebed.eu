@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#home"><img src="img/wisebed-logo-dots-30x30.png" width="30" height="30"/></a>
+                <a class="navbar-brand" href="#home" onclick="navigate('home')"><img src="img/wisebed-logo-dots-30x30.png" width="30" height="30"/></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,7 +79,7 @@
                             <li><a href="#docs_soap">SOAP API</a></li>
                             <li><a href="#docs_rest">REST API</a></li>
                             <li class="divider"></li>
-                            <li><a href="#tools_tr">Testbed Backend Software</a></li>
+                            <li><a href="#tools_tr">Testbed Runtime</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -120,8 +120,6 @@
 
     function navigate(destination) {
 
-        console.log("Navigating to " + destination);
-
         $("#wisebed_nav").find('li.dropdown').toggleClass('active', false);
         $("#wisebed_nav")
                 .find("ul.dropdown-menu li a[href=#" + destination + "]")
@@ -156,6 +154,7 @@
         "testbeds_unige",
         "testbeds_tud",
         "testbeds_ulanc",
+        "testbeds_yourown",
         "tools_web",
         "tools_desktop",
         "tutorials",
@@ -175,10 +174,6 @@
     ];
 
     $(function() {
-        navigate(window.location.hash.substr(1));
-    });
-
-    $(window).on('hashchange', function() {
         navigate(window.location.hash.substr(1));
     });
 </script>
