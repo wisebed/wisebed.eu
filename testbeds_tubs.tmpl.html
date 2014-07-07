@@ -1,7 +1,99 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p>Testbed TUBS</p>
+        <div class="col-md-8">
+            <h3>Testbeds: Braunschweig Institute of Technology (TUBS)</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h4>Overview</h4>
+
+            <p>
+                The testbed in Braunschweig consists of 30 iSense nodes, connected to different kinds of sensors and
+                actuators. The sensor nodes are installed beneath a hallway floor, connected to a total of 120 load
+                sensors (each 4 load senors to one iSense node). The hallway floor consists of quadratic floor tiles
+                with a side length of 60cm - placed on small metal columns. On each of these metal columns, we have
+                installed on self-constructed load sensor. The setup is shown in the following figures:
+            </p>
+
+            <img src="img/testbed-tubs-1.jpg" width="400" height="267" class="img-rounded img-bordered"/>
+            <img src="img/testbed-tubs-2.jpg" width="400" height="267" class="img-rounded img-bordered"/>
+            <img src="img/testbed-tubs-3.jpg" width="400" height="222" class="img-rounded img-bordered"/>
+
+            <p>
+                In addition to the load sensors, the iSense sensor nodes are also connected to a sensor/actuator unit at
+                the wall. Each of these units consist of one PIR (passive infrared) sensor, and a light and speaker
+                unit &mdash; allowing an interaction of the sensor network with passers-by. Such a unit looks as
+                follows:
+            </p>
+
+            <img src="img/testbed-tubs-4.jpg" width="400" height="267" class="img-rounded img-bordered"/>
+
+            <p>
+                In total, we have installed 30 sensor nodes, each connected to four load sensors, one PIR sensor, and a
+                LED and speaker actuator unit. The resulting connection diagram looks as follows:
+            </p>
+
+            <h4>Hardware</h4>
+
+            <p>
+                The testbed consists of the following sensor nodes:
+            </p>
+            <ul>
+                <li>iSense by <a href="http://www.coalesenses.com/" target="_blank">coalesenses</a><br/>
+                    <ul>
+                        <li>Jennic 32 bit microprocessor (JN5139R1)</li>
+                        <li>802.15.4 radio interface</li>
+                        <li>Fixed Power Supply via USB Interface</li>
+                        <li>Connected to four load sensors, one PIR sensor, and a LED and speaker actuator unit</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Client Configuration</h3>
+
+            <h4>WiseGui Web Frontend</h4>
+
+            <p>
+                You can directly interact with our testbed using the <a href="#tools_web">WiseGui</a>-based Web frontend:
+                <a href="http://wisebed.itm.uni-luebeck.de/">http://wisebed.itm.uni-luebeck.de/</a>.
+            </p>
+
+            <h4>SOAP API v2.3 Web Service Endpoints</h4>
+
+            <p>
+                If you are using our SOAP API (e.g. by using the older
+                <a href="#tools_desktop">Experimentation Scripts</a> scripting client or writing a custom client) you'll
+                need the endpoint URLs listed below:
+            </p>
+
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <td align="right"><b>Testbed URN Prefix</b></td>
+                    <td><code>urn:wisebed:tubs:</code></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="right"><b>SNAA</b></td>
+                    <td><a href="http://wbportal.ibr.cs.tu-bs.de:8083/snaa">http://wbportal.ibr.cs.tu-bs.de:8083/snaa</a>
+                    </td>
+                    <td><a href="http://wbportal.ibr.cs.tu-bs.de:8083/snaa?wsdl">WSDL</a></td>
+                </tr>
+                <tr>
+                    <td align="right"><b>RS</b></td>
+                    <td><a href="http://wbportal.ibr.cs.tu-bs.de:8082/rs">http://wbportal.ibr.cs.tu-bs.de:8082/rs</a>
+                    </td>
+                    <td><a href="http://wbportal.ibr.cs.tu-bs.de:8082/rs?wsdl">WSDL</a></td>
+                </tr>
+                <tr>
+                    <td align="right"><b>SM</b></td>
+                    <td><a href="http://wbportal.ibr.cs.tu-bs.de:8080/sessions">http://wbportal.ibr.cs.tu-bs.de:8080/sessions</a>
+                    </td>
+                    <td><a href="http://wbportal.ibr.cs.tu-bs.de:8080/sessions?wsdl">WSDL</a></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
