@@ -1,7 +1,69 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p>Testbed TUD</p>
+        <div class="col-md-8">
+            <h3>
+                <small>Testbeds</small>
+                <br/>Delft University of Technology (TUD)
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h4>Testbed Description</h4>
+
+            <p>
+                The Rack testbed at the Delft University of Technology is distributed around the office rooms at the 9th
+                floor of the EWI building. The testbed consist of 108 SOWNet G-Node G301, 24 SOWNet T-Node and 8 Tmote
+                Sky. The G-Nodes are connected to Alix.1D mini-PC via both USB for programming and via GPIO to control
+                the I/O pins of the G-Node and simulate sensors. The T-Nodes and Tmote Sky motes are connected via USB
+                to Linksys NSLU2. The T-Nodes are also connected to the NSLU2 via an additional board for accurately
+                capturing the energy consumption.
+            </p>
+
+            <p>
+                The sensor nodes have the following specification:
+            </p>
+            <ul>
+                <li><a href="http://www.sownet.nl/index.php/en/products/gnode" target="_blank">SOWNet G-Node G301</a>
+                    <ul>
+                        <li>Texas Instruments MSP430F2418 (16 MHz, 116 KB ROM, 8 KB RAM)</li>
+                        <li>Texas Instruments CC1101 (868 MHz, 500 kbps)</li>
+                        <li>Atmel AT45DB081D (8 Mb flash)</li>
+                    </ul>
+                </li>
+                <li><a href="http://www.sownet.nl/index.php/en/products" target="_blank">SOWNet T-Node</a>
+                    <ul>
+                        <li>Atmel ATmega 128L (8 MHz, 128 KB ROM, 4 KB RAM)</li>
+                        <li>Texas Instruments CC1000 (868 MHz, 38.4 kbps)</li>
+                        <li>Atmel AT45DB041B (4 Mb flash)</li>
+                    </ul>
+                </li>
+                <li>Tmote Sky
+                    <ul>
+                        <li>Texas Instruments MSP430F1611 (8 MHz, 48 KB ROM, 10 KB RAM)</li>
+                        <li>Texas Instruments CC2420 (2.4 GHz, 250 kpbs)</li>
+                        <li>STMicroelectronics M25P80 (8 Mb flash)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="img/testbed-tud-1.jpg" width="400" height="306" class="img-rounded img-bordered"/><br/>
+            <small>SOWNet T-Node with USB and power measurement cables attached</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="img/testbed-tud-2.jpg" width="400" height="267" class="img-rounded img-bordered"/><br/>
+            <small>SOWNet G-Node G301 with Gstub add-on for GPIO control</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="img/testbed-tud-3.jpg" width="400" height="400" class="img-rounded img-bordered"/><br/>
+            <small>Alix.1D with GBoard for GPIO control</small>
         </div>
     </div>
 </div>
