@@ -1,7 +1,66 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p>Testbed UPC</p>
+        <div class="col-md-8">
+            <h3>
+                <small>Testbeds</small>
+                <br/>Universitat Politecnica de Catalunya (UPC)
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h4>Testbed Description</h4>
+
+            <p>
+                The testbed at the <a href="http://www.upc.edu/eng/" target="_blank">Technical University of
+                Catalonia</a> is distributed around different rooms at the
+                <a href="http://www.lsi.upc.edu/" target="_blank">Software Department</a> (building Omega, 2nd. floor),
+                located in&nbsp;<a
+                    href="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=campus+nord&amp;aq=&amp;sll=41.388762,2.112239&amp;sspn=0.047394,0.132093&amp;ie=UTF8&amp;hq=campus+nord&amp;hnear=&amp;ll=41.38956,2.112207&amp;spn=0.045783,0.132093&amp;z=14"
+                    target="_blank">Campus Nord</a>. The testbed consists currently of 10 iSense nodes in 5 rooms.
+            </p>
+
+            <p>
+                The characteristics of UPC testbed nodes (iSense nodes by
+                <a href="http://www.coalesenses.com/" target="_blank">coalesenses</a>) are the following:
+            </p>
+            <ul>
+                <li>Jennic 32-bit RISC Controller, 16MHz (JN5139R1)</li>
+                <li>IEEE 802.15.4 compliant radio, 250 kbit/s, hardware AES Encryption</li>
+                <li>High accuracy (20ppm) real time clock</li>
+                <li>Software controllable voltage regulator</li>
+                <li>High-gain SMA antenna</li>
+                <li>Fixed Power Supply via USB Interface</li>
+            </ul>
+
+            <p>
+                Additionally, and independently of the testbed itself, there is a dedicated pair of iSense sensors. One
+                of them is equiped with a solar module and temperature and light sensors. Its function is to gather
+                following data:
+            </p>
+
+            <ul>
+                <li>Controller voltage</li>
+                <li>Supply voltage</li>
+                <li>Battery voltage</li>
+                <li>Battery charge</li>
+                <li>Battery current</li>
+                <li>Battery temperature</li>
+                <li>Charge status</li>
+                <li>Power source (basically wether there's solar power available)</li>
+                <li>Environmental temperature</li>
+                <li>Environmental light</li>
+            </ul>
+
+            <p>
+                It samples all this data every minute and sends it to the second sensor by radio. This sensor is
+                connected to a computer via USB. It formats and sends the data to the computer through the USB port.
+            </p>
+
+            <p>
+                This data is available through the following URL:
+                <a href="http://pctic0801.lsi.upc.edu:8080/" target="_blank">http://pctic0801.lsi.upc.edu:8080/</a>
+            </p>
         </div>
     </div>
 </div>
