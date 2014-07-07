@@ -1,7 +1,259 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <p>Testbed UZL</p>
-        </div>
+<div class="row">
+    <div class="col-md-8">
+        <h3>Testbeds: University of Lübeck (UZL)</h3>
     </div>
+</div>
+<div class="row">
+    <div class="col-md-5">
+
+        <h4>Overview</h4>
+
+        <p>
+            The Lübeck testbed is located in the Institute of Telematics at University of Lübeck and consists of over
+            200 heterogeneous wireless sensor nodes. It is spread over the available office rooms, each room offering
+            one or two clusters of nodes. Each cluster contains three iSense nodes, three TelosB nodes and three
+            Pacemate nodes.
+        </p>
+
+        <p>
+
+        </p>
+
+        <p>
+            Access the testbed directly using our Web-based client:<br/>
+            <a href="http://portal.wisebed.itm.uni-luebeck.de">http://portal.wisebed.itm.uni-luebeck.de</a>
+        </p>
+
+        <p>
+            For more details on the testbed setup please look at the testbed details section at the end of this page.
+        </p>
+    </div>
+    <div class="col-md-3">
+        <img style="border: 1px solid #eee;" class="img-rounded" src="img/testbed-uzl-floorplan.png"
+             alt="Testbed Layout UZL" width="237" height="350"/>
+        Download plan as <a href="img/testbed-uzl.pdf">PDF</a> or <a href="img/testbed-uzl.png">PNG</a>.
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <h3>Client Configuration</h3>
+        <h4>wisebed.js-scripts</h4>
+
+        <p>
+            <a href="https://github.com/wisebed/wisebed.js">wisebed.js</a> is a JavaScript-based client library
+            that builds upon the REST API defined for the newest version of the WISEBED backend system
+            <a href="https://github.com/itm/testbed-runtime">Testbed Runtime</a>. It uses HTTP requests/responses
+            for most management operations and the WebSocket for communication with the sensor nodes serial port.
+            <a href="https://github.com/wisebed/wisebed.js-scripts">wisebed.js-scripts</a> is
+            a collection of command-line scripts built upon wisebed.js, offering the same (and a bit more)
+            functionality than the well-known but nowadays technically outdated
+            <a href="https://github.com/wisebed/experimentation-scripts">experimentation-scripts</a>.
+        </p>
+            <pre>
+{
+  "rest_api_base_url"  : "http://portal.wisebed.itm.uni-luebeck.de/rest/v1.0",
+  "websocket_base_url" : "ws://portal.wisebed.itm.uni-luebeck.de/ws/v1.0",
+  "credentials"        : [
+    {
+      "urnPrefix" : "urn:wisebed:uzl1:",
+      "username"  : "YOUR_USERNAME_HERE",
+      "password"  : "YOUR_PASSWORD_HERE"
+    }
+  ]
+}
+            </pre>
+        <h4>REST API v1.0</h4>
+
+        <p>
+            Version 0.9 of the testbed backend software <a href="#tools_tr">Testbed Runtime</a> implements the
+            <a href="#docs_rest">REST API v1.0</a> that offers all of the important features of the SOAP API.
+            So far, there is no official specification or documentation but anyone that wishes to do so can easily
+            reverse engineer the API by looking at the
+            <a href="https://github.com/wisebed/wisebed.js">wisebed.js source code</a>.
+        </p>
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <td align="right"><b>Testbed URN Prefix</b></td>
+                <td><code>urn:wisebed:uzl1:</code></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="right"><b>REST API Base URL</b></td>
+                <td><a href="http://portal.wisebed.itm.uni-luebeck.de/rest/v1.0/">http://portal.wisebed.itm.uni-luebeck.de/rest/v1.0/</a>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="right"><b>WebSockets Base URL</b></td>
+                <td><a href="ws://portal.wisebed.itm.uni-luebeck.de/ws/v1.0/">ws://portal.wisebed.itm.uni-luebeck.de/ws/v1.0/</a>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            </tbody>
+        </table>
+        <h4>SOAP API v3 Web Service Endpoints</h4>
+
+        <p>
+            If you are using our SOAP API (e.g. by using the older
+            <a href="#tools_desktop">Experimentation Scripts</a> scripting client or writing a custom client) you'll
+            need the endpoint URLs listed below:
+        </p>
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                <td align="right"><b>Testbed URN Prefix</b></td>
+                <td><code>urn:wisebed:uzl1:</code></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="right"><b>SNAA</b></td>
+                <td><a href="http://portal.wisebed.itm.uni-luebeck.de/soap/v3/snaa">http://portal.wisebed.itm.uni-luebeck.de/soap/v3/snaa</a>
+                </td>
+                <td><a href="http://portal.wisebed.itm.uni-luebeck.de/soap/v3/snaa?wsdl">WSDL</a></td>
+            </tr>
+            <tr>
+                <td align="right"><b>RS</b></td>
+                <td><a href="http://portal.wisebed.itm.uni-luebeck.de/soap/v3/rs">http://portal.wisebed.itm.uni-luebeck.de/soap/v3/rs</a>
+                </td>
+                <td><a href="http://portal.wisebed.itm.uni-luebeck.de/soap/v3/rs?wsdl">WSDL</a></td>
+            </tr>
+            <tr>
+                <td align="right"><b>SM</b></td>
+                <td><a href="http://portal.wisebed.itm.uni-luebeck.de/soap/v3/sm">http://portal.wisebed.itm.uni-luebeck.de/soap/v3/sm</a>
+                </td>
+                <td><a href="http://portal.wisebed.itm.uni-luebeck.de/soap/v3/sm?wsdl">WSDL</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <h3>Testbed Details</h3>
+        <h4>Address Spaces</h4>
+
+        <p>
+            Every node type has a designated address space so you can tell from the MAC address of which type the
+            node is and to which gateway it is attached.
+        </p>
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>Node Type</th>
+                <th>Smallest Address</th>
+                <th>Largest Address</th>
+            </tr>
+            <tr>
+                <td>iSense Jennic JN5139R1</td>
+                <td>0x2000</td>
+                <td>0x20FF</td>
+            </tr>
+            <tr>
+                <td>iSense Jennic JN5148</td>
+                <td>0x2100</td>
+                <td>0x21FF</td>
+            </tr>
+            <tr>
+                <td>Telos B</td>
+                <td>0x2200</td>
+                <td>0x22FF</td>
+            </tr>
+            <tr>
+                <td>Pacemate</td>
+                <td>0x2300</td>
+                <td>0x23FF</td>
+            </tr>
+            </thead>
+        </table>
+        <h4>Detailed Description</h4>
+
+        <p>
+            The local WISEBED testbed at the University of Lübeck is located in the office room at the
+            <a href="http://www.itm.uni-luebeck.de" target="_blank">Institute of Telematics</a>
+            (Building 64, 2nd floor). The testbed consists of 162 nodes of three different kinds (iSense, TelosB and
+            Pacemate) in 15 rooms and the sandbox of 18 nodes in one isolated room.
+        </p>
+
+        <p>
+            The nodes are arranged in clusters and each cluster has one sensor node of each node type. There are two
+            different cluster layouts in the UZL testbed, which differ in the sensor module connected to the iSense
+            node. Half of the iSense sensor nodes are equipped with an environmental sensor module (measuring
+            temperature and light sensor) while the remaining nodes are equipped with a security module (featuring a
+            passive infrared sensor and an accelerometer). This setup allows us to compare and benchmark the same
+            algorithm or application on different hardware with nearly identical conditions and even in
+            heterogeneous testbeds.
+        </p>
+
+        <p>
+            The clusters are connected to a total of 20 Acer Aspire One netbooks forming the backbone of the testbed
+            connected to the Internet. The sensor nodes are connected to the netbooks via USB and the netbooks
+            itself are connected to the Internet via a Fast-Ethernet LAN connection. This backbone enables the user
+            to program or reset the sensor nodes without the need of an additional OTAP (Over the air programming)
+            protocol. Furthermore it is used to debug the testbed, capture trace files and deliver data via virtual
+            links without influencing the sensor node radio channel.
+        </p>
+
+        <p>
+            The UZL testbed consists of the following sensor nodes:
+        </p>
+        <ul>
+            <li>iSense by&nbsp;<a href="http://www.coalesenses.com/" target="_blank">coalesenses</a>&nbsp;<br>
+                <ul>
+                    <li>Jennic 32 bit microprocessor (JN5139R1 and JN5148)</li>
+                    <li>802.15.4 radio interface</li>
+                    <li>Fixed Power Supply via USB Interface</li>
+                    <li>Half of the nodes are equipped with temperature and light sensors</li>
+                    <li>the other half with a PIR and an accelerometer</li>
+                </ul>
+            </li>
+            <li>TelosB by <a href="http://www.xbow.com/" target="_blank">Crossbow</a> (now
+                <a href="http://www.willow.co.uk/html/telosb_mote_platform.html" target="_blank">Willow</a>)<br>
+                <ul>
+                    <li>Texas Instruments 16 bit microprocessor (TI MSP 430)</li>
+                    <li>802.15.4 radio interface</li>
+                    <li>Fixed Power Supply via the USB Interface</li>
+                    <li>Temperature, humidity and light sensor</li>
+                    <li>1 MB external flash</li>
+                </ul>
+            </li>
+            <li>Pacemate designs by the ITM<br>
+                <ul>
+                    <li>Philips 32 bit microprocessor (LPC 2136)</li>
+                    <li>Radio interface at 800 MHz</li>
+                    <li>Display and three buttons</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <img src="img/testbed-uzl-1.jpg" width="300" height="225" class="img-rounded"/>
+        <small>
+            Two UZL clusters connected to an Acer Aspire One as backbone in the ITM seminar room.
+        </small>
+    </div>
+    <div class="col-md-4">
+        <img src="img/testbed-uzl-2.jpg" width="300" height="225" class="img-rounded"/>
+        <small>
+            UZL cluster with an iSense, Pacemate and TelosB mote.
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <img src="img/testbed-uzl-3.jpg" width="300" height="225" class="img-rounded"/>
+        <small>
+            The two cluster layouts with different sensor modules (Environmental and Security module).
+        </small>
+    </div>
+    <div class="col-md-4">
+        <img src="img/testbed-uzl-thumbnail.png" width="300" height="225" class="img-rounded"/>
+        <small>
+            The testbed floor plan. Download as <a href="img/testbed-uzl.pdf">PDF</a> or <a href="img/testbed-uzl.png">PNG</a>.
+        </small>
+    </div>
+</div>
 </div>
