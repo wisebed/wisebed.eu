@@ -139,10 +139,6 @@
         $("#wisebed_content").loadTemplate(template + ".tmpl.html", {});
     }
 
-    $("#wisebed_nav").find("ul.dropdown-menu li a").click(function() {
-        navigate($(this).attr('href').substr(1));
-    });
-
     var templates = [
         "home",
         "testbeds_uzl",
@@ -176,6 +172,10 @@
     $(function() {
         navigate(window.location.hash.substr(1));
     });
+
+    window.onhashchange = function() {
+        navigate(window.location.hash.substr(1));
+    };
 </script>
 </body>
 </html>
