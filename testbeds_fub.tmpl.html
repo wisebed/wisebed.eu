@@ -1,11 +1,29 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h3><small>Testbeds</small><br/>Freie Universität Berlin (FUB)</h3>
+            <h3>
+                <small>Testbeds</small>
+                <br/>Freie Universität Berlin (FUB)
+            </h3>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8">
+
+            <div class="alert alert-warning" role="alert">
+                Please note that the WISEBED project ended in May 2011. Some but not all of the testbeds are still
+                operational and some but not all of the software solutions are still being developed. The information
+                below reflects the testbed state at the end of the WISEBED project.
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                <p>
+                    The FUB testbed however is still being actively used by experimenters, maintained. For more
+                    up-to-date information on this testbed please visit
+                    <a href="http://www.des-testbed.net/">http://www.des-testbed.net/</a>.
+                </p>
+            </div>
+
             <h4>Testbed Description</h4>
 
             <p>
@@ -55,94 +73,94 @@
                 </tr>
                 </tbody>
             </table>
-                <p>
-                    Each router is equipped with three or more IEEE 802.11a/b/g network interface cards (NICs).
-                    Currently, we use one LogiLink WL0025 dongle based on the RT2501U architecture with an RT2571W
-                    BB/MAC IC and RT2528 RF IC. This NIC features an on-board R-SMA connector and a 4 dBi Hi-Gain
-                    antenna. The antennas are mounted at the side panels of the router using extension cables.
-                    Additionally, all mesh routers are equipped with two Atheros-based MiniPCI cards (WLM54SAG)
-                    connected with <a href="http://www.pcengines.ch/antsmadb.htm">dual-band antennas</a>. The indoor
-                    nodes use a custom case that is manufactured at Freie Universität Berlin.
-                </p>
+            <p>
+                Each router is equipped with three or more IEEE 802.11a/b/g network interface cards (NICs).
+                Currently, we use one LogiLink WL0025 dongle based on the RT2501U architecture with an RT2571W
+                BB/MAC IC and RT2528 RF IC. This NIC features an on-board R-SMA connector and a 4 dBi Hi-Gain
+                antenna. The antennas are mounted at the side panels of the router using extension cables.
+                Additionally, all mesh routers are equipped with two Atheros-based MiniPCI cards (WLM54SAG)
+                connected with <a href="http://www.pcengines.ch/antsmadb.htm">dual-band antennas</a>. The indoor
+                nodes use a custom case that is manufactured at Freie Universität Berlin.
+            </p>
 
-                <img src="img/testbed-fub-1.png" width="300" height="293" class="img-rounded img-bordered"/>
+            <img src="img/testbed-fub-1.png" width="300" height="293" class="img-rounded img-bordered"/>
 
-                <p>
-                    10 outdoor nodes are currently being deployed. They use the weather-proof
-                    <a href="http://www.pcengines.ch/case2c4.htm" target="_blank">4A2E kit</a> and special
-                    <a href="http://www.pcengines.ch/antnr.htm" target="_blank">outdoor antennas</a>.
-                </p>
+            <p>
+                10 outdoor nodes are currently being deployed. They use the weather-proof
+                <a href="http://www.pcengines.ch/case2c4.htm" target="_blank">4A2E kit</a> and special
+                <a href="http://www.pcengines.ch/antnr.htm" target="_blank">outdoor antennas</a>.
+            </p>
 
-                <img src="img/testbed-fub-2.png" width="300" height="169" class="img-rounded img-bordered"/>
+            <img src="img/testbed-fub-2.png" width="300" height="169" class="img-rounded img-bordered"/>
 
-                <p>
-                    The primary Ethernet port of all nodes is used to boot the operating system over the network and to
-                    mount the root file system. The mesh routers have no need for local persistent memory and store
-                    their data on a central server. The mesh routers mainly are mains powered, but in locations that
-                    lack access to the power supply system, Power over Ethernet (PoE) adapters are used.
-                </p>
-                <h4>DES-WSN</h4>
+            <p>
+                The primary Ethernet port of all nodes is used to boot the operating system over the network and to
+                mount the root file system. The mesh routers have no need for local persistent memory and store
+                their data on a central server. The mesh routers mainly are mains powered, but in locations that
+                lack access to the power supply system, Power over Ethernet (PoE) adapters are used.
+            </p>
+            <h4>DES-WSN</h4>
 
-                <p>
-                    Each mesh router is equipped with a <a href="ftp://ftp.inf.fu-berlin.de/pub/reports/tr-b-08-15.pdf">MSB-A2</a>
-                    sensor node (developed at Freie Universität Berlin) that is connected via a USB cable which provides
-                    power supply and is used to write firmware images to the flash memory.
-                </p>
+            <p>
+                Each mesh router is equipped with a <a href="ftp://ftp.inf.fu-berlin.de/pub/reports/tr-b-08-15.pdf">MSB-A2</a>
+                sensor node (developed at Freie Universität Berlin) that is connected via a USB cable which provides
+                power supply and is used to write firmware images to the flash memory.
+            </p>
 
-                <img src="img/testbed-fub-3.png" width="300" height="126" class="img-rounded img-bordered"/>
+            <img src="img/testbed-fub-3.png" width="300" height="126" class="img-rounded img-bordered"/>
 
-                <p>
-                    The MSB-A2 sensor nodes use an <a href="http://www.nxp.com/pip/LPC2387_3.html">LPC2387</a>
-                    microcontroller produced by NXP Semiconductors. The frequency of the 32-bit ARM7 TDMI-S core based
-                    microcontroller can be dynamically configured at runtime to up to 72 MHz, depending on the sensor
-                    network application and energy requirements. The TI (formerly Chipcon)
-                    <a href="http://focus.ti.com/docs/prod/folders/print/cc1100.html">CC1100</a> transceiver uses the
-                    ISM band at 863 to 870 MHz with a maximum data rate of 500 kbit/s. The MSB-A2 nodes set up a
-                    wireless testbed in parallel to the mesh routers that is fully orthogonal to the frequency band used
-                    by IEEE 802.11.
-                </p>
-                <table class="table table-condensed">
-                    <tbody>
-                    <tr>
-                        <td>Microcontroller</td>
-                        <td>NXP Semiconductors LPC2387</td>
-                    </tr>
-                    <tr>
-                        <td>CPU Frequency</td>
-                        <td>up to 72 MHz</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>98 KiB</td>
-                    </tr>
-                    <tr>
-                        <td>Flash</td>
-                        <td>512 KiB</td>
-                    </tr>
-                    <tr>
-                        <td>Transceiver</td>
-                        <td>Chipcon CC1100</td>
-                    </tr>
-                    <tr>
-                        <td>Expansion</td>
-                        <td>GPIO pins<br/>
-                            mini USB 2.0 port
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Storage</td>
-                        <td>microSD-card socket</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <p>
-                    The sensor nodes are equipped with a
-                    <a href="http://www.sensirion.com/en/01_humidity_sensors/02_humidity_sensor_sht11.htm">Sensirion
-                        SHT-11</a> temperature and humidity sensor. Depending on the experiment scenario, extensions are
-                    connected on-demand via the general purpose input/output pins (GPIO) or the second on-board mini USB
-                    port. In addition to the internal 512 KiB flash memory, microSD-cards can be used. Unlimited data
-                    storage is available via the Ethernet backbone provided by the mesh routers.
-                </p>
+            <p>
+                The MSB-A2 sensor nodes use an <a href="http://www.nxp.com/pip/LPC2387_3.html">LPC2387</a>
+                microcontroller produced by NXP Semiconductors. The frequency of the 32-bit ARM7 TDMI-S core based
+                microcontroller can be dynamically configured at runtime to up to 72 MHz, depending on the sensor
+                network application and energy requirements. The TI (formerly Chipcon)
+                <a href="http://focus.ti.com/docs/prod/folders/print/cc1100.html">CC1100</a> transceiver uses the
+                ISM band at 863 to 870 MHz with a maximum data rate of 500 kbit/s. The MSB-A2 nodes set up a
+                wireless testbed in parallel to the mesh routers that is fully orthogonal to the frequency band used
+                by IEEE 802.11.
+            </p>
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <td>Microcontroller</td>
+                    <td>NXP Semiconductors LPC2387</td>
+                </tr>
+                <tr>
+                    <td>CPU Frequency</td>
+                    <td>up to 72 MHz</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>98 KiB</td>
+                </tr>
+                <tr>
+                    <td>Flash</td>
+                    <td>512 KiB</td>
+                </tr>
+                <tr>
+                    <td>Transceiver</td>
+                    <td>Chipcon CC1100</td>
+                </tr>
+                <tr>
+                    <td>Expansion</td>
+                    <td>GPIO pins<br/>
+                        mini USB 2.0 port
+                    </td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>microSD-card socket</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>
+                The sensor nodes are equipped with a
+                <a href="http://www.sensirion.com/en/01_humidity_sensors/02_humidity_sensor_sht11.htm">Sensirion
+                    SHT-11</a> temperature and humidity sensor. Depending on the experiment scenario, extensions are
+                connected on-demand via the general purpose input/output pins (GPIO) or the second on-board mini USB
+                port. In addition to the internal 512 KiB flash memory, microSD-cards can be used. Unlimited data
+                storage is available via the Ethernet backbone provided by the mesh routers.
+            </p>
             </table>
         </div>
     </div>
