@@ -1,7 +1,157 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p>Testbed CTI</p>
+        <div class="col-md-8">
+            <h3>
+                <small>Testbeds</small>
+                <br/>Computer Technology Institute &amp; Press (CTI)
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h4>Overview</h4>
+
+            <p>
+                The local WISEBED testbed at the Computer Technology Institute &amp; Press "Diophantus" (CTI) is located
+                in the office room at the <a href="http://www.cti.gr/en/">CTI</a> ( Maritsa's building 0. floor). The
+                testbed consists of 154 nodes of two different kinds (iSense and TelosB ) in 8 rooms.
+            </p>
+
+            <p>
+                The CTI testbed consists of the following sensor nodes:
+            </p>
+
+            <ul>
+                <li>iSense by <a href="http://www.coalesenses.com/" target="_blank">coalesenses</a><br/>
+                    <ul>
+                        <li>Jennic 32 bit microprocessor (JN5139R1)</li>
+                        <li>802.15.4 radio interface</li>
+                        <li>Fixed Power Supply via USB Interface</li>
+                        <li>Half of the nodes are equipped with temperature and light sensors</li>
+                        <li>the other half with a PIR and an accelerometer</li>
+                    </ul>
+                </li>
+                <li>TelosB by<a href="http://www.xbow.com/" target="_blank">Crossbow</a> (now <a
+                        href="http://www.willow.co.uk/html/telosb_mote_platform.html" target="_blank">willow</a>)<br>
+                    <ul>
+                        <li>Texas Instruments 16 bit microprocessor (TI MSP 430)</li>
+                        <li>802.15.4 radio interface</li>
+                        <li>Fixed Power Supply via the USB Interface</li>
+                        <li>Temperature, humidity and light sensor</li>
+                        <li>1 MB external flash</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="img/testbed-cti-1.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            An Arduino that is Controlling the a lamp in the kitchen. This Arduino can be controlled using the Testbed
+            Nodesto switch lights on and off automatically when someone enters the room.
+        </div>
+        <div class="col-md-4">
+            <img src="img/testbed-cti-2.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            Closest look of the arduino.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="img/testbed-cti-3.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            The lamp the Arduino is connected to, and the iSense that controlls it (lower left corner).
+        </div>
+        <div class="col-md-4">
+            <img src="img/testbed-cti-4.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            An iSense and a TelosB node placed on the wall. The iSense is using an Environmental. The TelosB is inside a
+            plastic Case.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="img/testbed-cti-5.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            iSense Node with External Antenna placed on a Window equiped with an Environmental Module. The iSense is
+            placed on the Window to increase communication Range.
+        </div>
+        <div class="col-md-4">
+            <img src="img/testbed-cti-6.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            An iSense and a TelosB node placed on the wall. The iSense is using an Environmental and a Security Module.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="img/testbed-cti-7.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            An iSense and a TelosB node placed on the wall. The iSense is using an Environmental and a Security Module.
+        </div>
+        <div class="col-md-4">
+            <img src="img/testbed-cti-8.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            iSense node Placed on a Window with a Security and an Environmental Module.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="img/testbed-cti-9.jpg" width="300" height="225" class="img-rounded img-bordered"/>
+            Detail view of the window node.
+        </div>
+        <div class="col-md-4">
+            <h5>More information</h5>
+            <ul>
+                <li><a href="http://150.140.5.11/testbed/floor0.png" target="_blank">Map of the nodes on floor 0</a>
+                </li>
+                <li><a href="http://150.140.5.11/testbed/floor2.png" target="_blank">Map of the nodes on floor 2</a>
+                </li>
+                <li><a href="http://150.140.5.11/testbed/floor3.png" target="_blank">Map of the nodes on floor 3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Client Configuration</h3>
+
+            <h4>WiseGui Web Frontend</h4>
+
+            <p>
+                You can directly interact with our testbed using the <a href="#tools_web">WiseGui</a>-based Web
+                frontend:
+                <a href="http://wisebed.itm.uni-luebeck.de/">http://wisebed.itm.uni-luebeck.de/</a>.
+            </p>
+
+            <h4>SOAP API v2.3 Web Service Endpoints</h4>
+
+            <p>
+                If you are using our SOAP API (e.g. by using the older
+                <a href="#tools_desktop">Experimentation Scripts</a> scripting client or writing a custom client) you'll
+                need the endpoint URLs listed below:
+            </p>
+
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <td align="right"><b>Testbed URN Prefix</b></td>
+                    <td><code>urn:wisebed:ctitestbed:</code></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="right"><b>SNAA</b></td>
+                    <td><a href="http://hercules.cti.gr:8890/snaa/shib1">http://hercules.cti.gr:8890/snaa/shib1</a>
+                    </td>
+                    <td><a href="http://hercules.cti.gr:8890/snaa/shib1?wsdl">WSDL</a></td>
+                </tr>
+                <tr>
+                    <td align="right"><b>RS</b></td>
+                    <td><a href="http://hercules.cti.gr:8888/rs/rs">http://hercules.cti.gr:8888/rs</a>
+                    </td>
+                    <td><a href="http://hercules.cti.gr:8888/rs/rs?wsdl">WSDL</a></td>
+                </tr>
+                <tr>
+                    <td align="right"><b>SM</b></td>
+                    <td><a href="http://hercules.cti.gr:8888/sessions">http://hercules.cti.gr:8888/sessions</a>
+                    </td>
+                    <td><a href="http://hercules.cti.gr:8888/sessions?wsdl">WSDL</a></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
