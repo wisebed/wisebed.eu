@@ -1,7 +1,127 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p>Desktop Clients</p>
+        <div class="col-md-8">
+            <h3>
+                <small>Tools &amp; Docs</small>
+                <br/>Desktop Clients
+            </h3>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-4">
+
+            <h4>wisebed.js-scripts<span class="label label-success pull-right">active</span></h4>
+
+            <p>
+                A set of command line utilities to control your experiments. Based on node.js and built on top of
+                wisebed.js. Download, install from
+                <a href="https://www.npmjs.org/package/wisebed.js-scripts">npmjs.org</a> and get the source at
+                <a href="https://github.com/wisebed/wisebed.js-scripts">github.com</a>.
+            </p>
+        </div>
+        <div class="col-md-4">
+
+            <h4>wisebed.js<span class="label label-success pull-right">active</span></h4>
+
+            <p>
+                A client library the WISEBED REST API for building custom clients (e.g. live WSN visualizations).
+                Available at <a href="https://www.npmjs.org/package/wisebed.js">npmjs.org</a> or
+                <a href="https://github.com/wisebed/wisebed.js">github.com</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <h4>Custom Clients</h4>
+
+            <p>
+                The WISEBED testbed federation is based on a common <a href="#docs_soap">SOAP Web Service API</a> or
+                <a href="#docs_rest">REST Web Service API</a>! Write your own client applications that suit your specific
+                needs, automate your experiments or use your custom client to enable real world network interactions.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <h4>Experimentation Scripts</h4>
+
+            <p>
+                A set of command line scripts to execute, control and interact with your experiment using
+                the WISEBED SOAP API v2.3. The scripts are based on the
+                <a href="https://github.com/wisebed/scripting-client">Scripting Client</a> project that
+                features a Java interpreter (BeanShell) and provides a pre-configured environment to the script to be
+                executed.
+                <a href="http://www.itm.uni-luebeck.de/projects/testbed-runtime-htdocs/tr.experimentation-scripts-current.tar.gz">Download</a>
+                the experimentation scripts and read the
+                <a href="https://github.com/wisebed/experimentation-scripts/wiki">documentation</a>.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <h4>Spyglass</h4>
+
+            <p>
+                SpyGlass is a modular and extensible visualization framework for wireless sensor networks. The tool can
+                visualize sensor nodes and communication links as well as information on the sensor values, link
+                quality or any other data from the sensor node.
+            </p>
+
+            <p>
+                SpyGlass implements the controller webservice from the iWSN API v2.3 to be able to receive messages from
+                a sensor network. A user just start an experiment, start SpyGlass, authenticate itself and choose the
+                active reservation.SpyGlass receives all messages from the running experiment and visualize the nodes
+                with so called SpyGlassPacket.
+            </p>
+
+            <p>
+                The source code can be obtained at <a href="https://github.com/itm/spyglass">https://github.com/itm/spyglass</a>,
+                the documentation at
+                <a href="https://github.com/itm/spyglass/wiki">https://github.com/itm/spyglass/wiki</a>.
+            </p>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <h4>WeyesBED</h4>
+
+            <p>
+                The WeyesBED visualization tool allows the visualization of WiseML files. The visualizer aims at
+                seamless trace replay of an experiment described in WiseML, thus allowing interactive visual
+                description, and representation of distributed algorithms and protocols. By being able to monitor every
+                experiment state and their transitions, researchers will be able to gain better insight on the inner
+                workings of their algorithms and potentially detect key-events that lead to problematic states or bugs.
+            </p>
+
+            <p>
+                To keep the visualization application as portable as possible, the visualizer is written in Java and
+                uses Java3D as the OpenGL frontend.
+            </p>
+
+            <p>
+                In essence, WiseML models WSN testbeds as graphs. The visualizer extends this concept to three
+                dimensions. An experiment is visualized as a graph in 3D space. Nodes are displayed as spheres and links
+                as lines that connect spheres. The user can navigate in the 3D space using his mouse and keyboard to
+                switch focus from one entity to a group of entities, or even to the whole network. When a graph entity
+                is chosen, its capabilities are displayed on the right part of the screen. Trace navigation and replay
+                is implemented by a video-like interface.
+            </p>
+
+            <p>
+                Documentation and source code are available at
+                <a href="http://www.es.ewi.tudelft.nl/software.html">http://www.es.ewi.tudelft.nl/software.html</a>.
+            </p>
+
+        </div>
+    </div>
+
 </div>
