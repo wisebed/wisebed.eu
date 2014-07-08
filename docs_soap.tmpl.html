@@ -1,7 +1,68 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p>SOAP API</p>
+        <div class="col-md-8">
+            <h3>
+                <small>Documentation</small>
+                <br/>SOAP API
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+
+            <p>
+                The original idea in the WISEBED project was to provide all testbed functionality via a standardized
+                SOAP API. This API is identical for every testbed as well as for federated testbeds, allowing you to
+                write
+                WISEBED clients in literally any programming language that is capable of speaking Web Services according
+                to the
+                WS/I interoperability profile.
+            </p>
+
+            <div class="alert alert-info" role="alert">
+                Nowadays, there's also a "more modern" <a href="#docs_rest">HTTP-based REST API</a> that enabled the
+                implementation of e.g., JavaScript-based client applications such as the <a href="#tools_web">WiseGui
+                Web-based graphical frontend</a> or the <a href="#tools_desktop">wisebed.js-scripts</a> shell tools.
+            </div>
+
+            <h4>Version 3.0</h4>
+
+            <p>
+                The current version 3.0 of the SOAP API WSDL files and documentation is being developed on github.com.
+                The API didn't see a final official release yet but is already in production use at the Lübeck testbed
+                site and is part of the upcoming Testbed Runtime release 0.9. For more information please go to:
+            </p>
+            <p>
+                <a href="https://github.com/wisebed/api-wsdl">https://github.com/wisebed/api-wsdl</a>
+            </p>
+
+            <h4>Version 2.3</h4>
+
+            <p>
+                Version 2.3 of the WISEBED SOAP API (and its predecessors) was standardized during the project runtime.
+                Below you'll find all necessary documentation which you still might find valuable as it is partially
+                "more verbose" than the current versions documentation and explains the basic concepts quite nicely.
+            </p>
+
+            <table class="table table-condensed">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="http://wisebed.eu/api/documentation/snaa/current/snaa-api.pdf">Sensor Network
+                        Authentication and Authorization API (SNAA)</a>
+                    </td>
+                    <td><a href="http://wisebed.eu/api/wsdl/snaa/current/">WSDL</a></td>
+                </tr>
+                <tr>
+                    <td><a href="http://wisebed.eu/api/documentation/rs/current/rs-api.pdf">Reservation System API (RS)</a></td>
+                    <td><a href="http://wisebed.eu/api/wsdl/rs/current/">WSDL</a></td>
+                </tr>
+                <tr>
+                    <td><a href="http://wisebed.eu/api/documentation/iwsn/current/iwsn-api.pdf">Wireless Sensor Network (iWSN) API</a></td>
+                    <td><a href="http://wisebed.eu/api/wsdl/iwsn/current/">WSDL</a></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
